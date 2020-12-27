@@ -4,19 +4,23 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class})
-@RestController
+@Controller
 public class LearnthymeleafApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LearnthymeleafApplication.class, args);
 	}
 
-	@GetMapping("/name")
-	public String getName(){
-		return "zhangjian";
+	@RequestMapping("/abc")
+	public String getName(Model model){
+		model.addAttribute("name", "zhangjian");
+		model.addAttribute("mail", "2468697909@qq.com");
+		return "index";
+
 	}
 }
