@@ -11,4 +11,4 @@ CREATE TABLE `sys_task`(
     `update_user` varchar(64) DEFAULT NULL COMMENT '更新者',
     `update_time` datetime DEFAULT NULL COMMENT '更新时间',
     PRIMARY KEY ('id')
-    ) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+    ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
