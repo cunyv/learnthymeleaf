@@ -5,7 +5,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import top.allhere.job.OutJob01;
 
-@Configuration
+/**
+ * 定时作业配置
+ */
+//@Configuration
 public class SchedulerConfig {
 
     @Bean
@@ -15,7 +18,7 @@ public class SchedulerConfig {
 
     @Bean
     public Trigger sampleJobTrigger(){
-        SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(2).repeatForever();
+        SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(3).repeatForever();
         return TriggerBuilder.newTrigger().forJob(sampleJobDetail()).withIdentity("sampleTrigger").withSchedule(simpleScheduleBuilder).build();
     }
 

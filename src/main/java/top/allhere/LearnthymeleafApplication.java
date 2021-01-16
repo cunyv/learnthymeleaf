@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class})
 @SpringBootApplication
-@MapperScan("top.allhere.repository")
+@MapperScan("top.allhere.mapper")
 @Controller
 public class LearnthymeleafApplication {
 
