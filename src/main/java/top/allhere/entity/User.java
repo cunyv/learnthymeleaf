@@ -6,7 +6,9 @@ import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
 
 /**
  * <p>
@@ -29,6 +31,7 @@ public class User implements Serializable {
      * 姓名
      */
     @NotNull
+    @NotBlank(message = "名字不能为空！")
     private String name;
 
     /**
