@@ -4,7 +4,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
@@ -17,9 +16,7 @@ public class LearnthymeleafApplication {
 	}
 
 	@RequestMapping("/index")
-	public String getName(Model model){
-		model.addAttribute("name", "zhangjian");
-		model.addAttribute("mail", "2468697909@qq.com");
+	public String getName(){
 		return "index";
 	}
 }
